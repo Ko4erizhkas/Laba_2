@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Laba_2
 {
-    public class Question
+    public class Question : Object
     {
         public string? Problem { get; set; }
         public string? Description { get; set; }
@@ -44,6 +44,7 @@ namespace Laba_2
             }
             return res.ToString();
         }
+        
         public bool CheckAnswer(int response)
         {
             return response == RightAnswer;
@@ -79,12 +80,6 @@ namespace Laba_2
             {
                 Console.WriteLine($"{item.Key}. {item.Value}");
             }
-        }
-        public void EnterQuestion()
-        {
-            Console.WriteLine("Создание вопроса");
-            Console.WriteLine("Введите проблему");
-
         }
     }
     //internal class MainQuestion

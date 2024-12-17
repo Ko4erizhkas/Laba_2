@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Laba_2
 {
-    public sealed class Testing
+    public sealed class Testing : Object
     {
         public List<Question> Questions { get; set; }
         public bool TestComplite { get; private set; }
@@ -56,30 +56,51 @@ namespace Laba_2
             }
             else { return true; }
         }
-    }
-    internal class MainTesting
-    {
-        static public void Main()
+        public new Type GetType()
         {
-            var dict = new Dictionary<int, string>()
+            return typeof(Testing);
+        }
+        public override int GetHashCode()
+        {
+            int hash = 17;
+            foreach (var q in Questions)
             {
-                [1] = "a",
-                [2] = "b",
-                [3] = "c",
-                [4] = "d",
-                [5] = "e",
-            };
-            List<Question> q = new List<Question>()
+                hash = hash * 34 + (q?.GetHashCode() ?? 0);
+            }
+            return hash;
+        }
+        public override bool Equals(object? obj)
+        {
+            if (obj == null || obj.GetType() != typeof(Testing))
             {
-                new Question("","", dict,1,1),
-                new Question("","", dict,2,1),
-                new Question("","", dict,1,1),
-                new Question("","", dict,5,1),
-                new Question("","", dict,3,1),
-                new Question("","", dict,1,1)
-            };
-            Testing t = new Testing(1,10,q);
-            Console.WriteLine(t);
+                return false;
+            }
+            return true;
         }
     }
+    //internal class MainTesting
+    //{
+    //    static public void Main()
+    //    {
+    //        var dict = new Dictionary<int, string>()
+    //        {
+    //            [1] = "a",
+    //            [2] = "b",
+    //            [3] = "c",
+    //            [4] = "d",
+    //            [5] = "e",
+    //        };
+    //        List<Question> q = new List<Question>()
+    //        {
+    //            new Question("","", dict,1,1),
+    //            new Question("","", dict,2,1),
+    //            new Question("","", dict,1,1),
+    //            new Question("","", dict,5,1),
+    //            new Question("","", dict,3,1),
+    //            new Question("","", dict,1,1)
+    //        };
+    //        Testing t = new Testing(1,10,q);
+    //        Console.WriteLine(t);
+    //    }
+    //}
 }
