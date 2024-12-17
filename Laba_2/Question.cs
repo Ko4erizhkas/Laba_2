@@ -7,7 +7,11 @@ using System.Threading.Tasks;
 
 namespace Laba_2
 {
-    public class Question
+    interface IQuestion
+    {
+        void PrintInfo();
+    }
+    public class Question : IQuestion
     {
         public string? Problem { get; set; }
         public string? Description { get; set; }
@@ -44,7 +48,17 @@ namespace Laba_2
             }
             return res.ToString();
         }
-        
+        public void PrintInfo()
+        {
+            Console.WriteLine($"Проблема: {Problem}");
+            Console.WriteLine($"Описание: {Description}");
+            Console.WriteLine("Вопросы: ");
+            foreach (var (key, val) in AnswerOptions)
+            {
+                Console.WriteLine($"{key}. {val}");
+            }
+            Console.WriteLine($"Правильный ответ: {RightAnswer}");
+        }
         public bool CheckAnswer(int response)
         {
             return response == RightAnswer;

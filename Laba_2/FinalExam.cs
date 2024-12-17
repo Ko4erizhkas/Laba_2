@@ -40,4 +40,5 @@ namespace Laba_2
             Console.WriteLine($"Final Exam Name: {ExamName}");
         }
     }
+    
 }
