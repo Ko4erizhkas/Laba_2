@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Laba_2
 {
-    class FinalExam : Exam
+    public class FinalExam : Exam
     {
         public string ExamName { get; set; }
         public FinalExam(string _ExamName, int _TimeLimit, List<Question> _Questions, int _MinScore, int _MaxScore)
