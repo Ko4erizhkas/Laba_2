@@ -1,5 +1,4 @@
 using Laba_2;
-
 namespace Tests
 {
     [TestClass]

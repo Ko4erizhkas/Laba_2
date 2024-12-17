@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -40,5 +41,10 @@ namespace Laba_2
             Console.WriteLine($"Final Exam Name: {ExamName}");
         }
     }
-    
+    internal class MainExam
+    {
+        static void Main()
+        { 
+        }
+    }
 }

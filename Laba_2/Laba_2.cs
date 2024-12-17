@@ -29,7 +29,7 @@ namespace Laba_2
             var newList = new List(list.elements);
             if (newList.elements.Count > 0)
             {
-                list.elements.RemoveAt(0);
+                newList.elements.RemoveAt(0);
             }
             return newList;
         }
@@ -46,6 +46,14 @@ namespace Laba_2
             var newList = new List(list1.elements);
             newList.elements.AddRange(list2.elements);
             return newList;
+        }
+        public override bool Equals(object obj)
+        {
+            if (obj == null || obj.GetType() != this.GetType())
+                return false;
+
+            var other = (List)obj;
+            return elements.SequenceEqual(other.elements);
         }
         public static void Run()
         {

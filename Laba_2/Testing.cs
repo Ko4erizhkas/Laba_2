@@ -25,7 +25,9 @@ namespace Laba_2
         }
         public override string ToString()
         {
+            CurrentScore = 0;
             StringBuilder res = new StringBuilder();
+            
             foreach (var q in Questions)
             {
                 if (q.ChoiceAnswer)
@@ -50,7 +52,7 @@ namespace Laba_2
         }
         public bool TestCompite()
         {
-            if (CurrentScore <= MinScoreForComplite)
+            if (CurrentScore >= MinScoreForComplite)
             {
                 return false;
             }
