@@ -80,37 +80,39 @@ namespace Laba_2
                 Console.WriteLine($"{item.Key}. {item.Value}");
             }
         }
-        public void Run()
+        public void EnterQuestion()
         {
-            
-        }
-    }
-    internal class MainQuestion
-    {
-        static public void Main()
-        {
-            string problem = "Что такое жопа ежа?";
-            string desc = "Существует ли такой термин как жопа ежа? Выберите один из ответов";
-            Dictionary<int, string> answers = new Dictionary<int, string>
-            {
-                [1] = "Она сушествует!!",
-                [2] = "Она не существует!",
-                [3] = "А чёрт его знает :)"
-            };
-            int correctAnswer = 1;
-            Question q = new Question(problem, desc, answers, correctAnswer);
-            Console.WriteLine(q);
-            Console.WriteLine("Ваш ответ: ");
-            int userChoice = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Создание вопроса");
+            Console.WriteLine("Введите проблему");
 
-            if (q.CheckAnswer(userChoice))
-            {
-                Console.WriteLine("Ваш ответ правильный!");
-            }
-            else 
-            {
-                Console.WriteLine("Ваш ответ неверный!");
-            }
         }
     }
+    //internal class MainQuestion
+    //{
+    //    static public void Main()
+    //    {
+    //        string problem = "Что такое жопа ежа?";
+    //        string desc = "Существует ли такой термин как жопа ежа? Выберите один из ответов";
+    //        Dictionary<int, string> answers = new Dictionary<int, string>
+    //        {
+    //            [1] = "Она сушествует!!",
+    //            [2] = "Она не существует!",
+    //            [3] = "А чёрт его знает :)"
+    //        };
+    //        int correctAnswer = 1;
+    //        Question q = new Question(problem, desc, answers, correctAnswer);
+    //        Console.WriteLine(q);
+    //        Console.WriteLine("Ваш ответ: ");
+    //        int userChoice = Convert.ToInt32(Console.ReadLine());
+
+    //        if (q.CheckAnswer(userChoice))
+    //        {
+    //            Console.WriteLine("Ваш ответ правильный!");
+    //        }
+    //        else
+    //        {
+    //            Console.WriteLine("Ваш ответ неверный!");
+    //        }
+    //    }
+    //}
 }
