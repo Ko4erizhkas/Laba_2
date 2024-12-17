@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Laba_2
 {
-    public class Question : Object
+    public class Question
     {
         public string? Problem { get; set; }
         public string? Description { get; set; }
