@@ -65,12 +65,12 @@ namespace Laba_2
             Console.WriteLine(list4);
         }
     }
-    internal class Laba_2
-    {
-        static void Main(string[] args)
-        {
-            List list = new List();
-            List.Run();
-        }
-    }
+    //internal class Laba_2
+    //{
+    //    static void Main(string[] args)
+    //    {
+    //        List list = new List();
+    //        List.Run();
+    //    }
+    //}
 }
